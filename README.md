@@ -3,7 +3,7 @@
 Simple example of a Contact App built in a few hours to show how to get access to Android and iOS gallery images using Kotlin Multiplatform.
 
 
- ### ⚙️ Preview Android - IOS
+ ### ⚙️ Techs
  - ["Camera | Gallery | KMM" - 
 Kamlesh Lakhani](https://medium.com/@kamal.lakhani56/camera-gallery-kmm-4d4e111b72ee) - Access native gallery flow inspiration
 - [Kotlin Multiplatform Wizard](https://kmp.jetbrains.com/) - Official tool for creating the KMP / KMM project
