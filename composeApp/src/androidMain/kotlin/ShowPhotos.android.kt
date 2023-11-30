@@ -21,7 +21,7 @@ actual class ImagePicker(
     private lateinit var getContent: ActivityResultLauncher<String>
 
     @Composable
-    actual fun registerPicker(onImagePicked: (ByteArray) -> Unit) {
+    actual fun RegisterPicker(onImagePicked: (ByteArray) -> Unit) {
         getContent = rememberLauncherForActivityResult(
             ActivityResultContracts.GetContent()
         ) { uri ->

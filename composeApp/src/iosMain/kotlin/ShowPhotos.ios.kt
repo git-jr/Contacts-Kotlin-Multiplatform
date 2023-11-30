@@ -53,7 +53,7 @@ actual class ImagePicker(
     }
 
     @Composable
-    actual fun registerPicker(onImagePicked: (ByteArray) -> Unit) {
+    actual fun RegisterPicker(onImagePicked: (ByteArray) -> Unit) {
         this.onImagePicked = onImagePicked
     }
 

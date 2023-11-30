@@ -26,7 +26,7 @@ fun App() {
         } else {
             var selectedBytes: ByteArray by remember { mutableStateOf(ByteArray(0)) }
             val imagePicker = ImagePickerFactory(context = getPlatformContext()).createPicker()
-            imagePicker.registerPicker { bytes: ByteArray ->
+            imagePicker.RegisterPicker { bytes: ByteArray ->
                 println("Bytes: $bytes")
                 selectedBytes = bytes
             }

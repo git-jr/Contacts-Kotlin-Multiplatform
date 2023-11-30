@@ -7,9 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -17,7 +15,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.TabRowDefaults.Divider
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
@@ -45,7 +42,7 @@ fun ContactsList(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(MaterialTheme.colors.primary)
+                .background(MaterialTheme.colors.primary.copy(alpha = 0.8f))
                 .padding(vertical = 8.dp, horizontal = 16.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
@@ -110,7 +107,7 @@ fun ContactItem(
                     modifier = Modifier
                         .size(48.dp)
                         .clip(CircleShape)
-                        .background(getRandomColor())
+                        .background(Color.Red.copy(alpha = 0.5f),)
                 ) {
                     Text(
                         text = contact.name.first().toString(),
@@ -128,28 +125,17 @@ fun ContactItem(
             ) {
 
                 Text(
-                    text = contact.reverseName,
+                    text = contact.name,
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
                 )
 
                 Text(
-                    text = contact.name,
+                    text = contact.reverseName,
                     fontSize = 14.sp,
                 )
 
             }
         }
     }
-}
-
-
-fun getRandomColor(): Color {
-    val randomColors = listOf(
-        Color.Blue.copy(alpha = 0.5f),
-        Color.Red.copy(alpha = 0.5f),
-        Color.Green.copy(alpha = 0.8f),
-        Color.Yellow.copy(alpha = 0.5f),
-    )
-    return randomColors.random()
 }

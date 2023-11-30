@@ -140,13 +140,13 @@ import rememberBitmapFromBytes
             Spacer(Modifier.height(22.dp))
 
             Text(
-                text = selectedContact.reverseName,
+                text = selectedContact.name,
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Bold,
             )
 
             Text(
-                text = selectedContact.name,
+                text = selectedContact.reverseName,
                 fontSize = 16.sp,
                 color = Color.Gray,
                 modifier = Modifier.padding(top = 16.dp)

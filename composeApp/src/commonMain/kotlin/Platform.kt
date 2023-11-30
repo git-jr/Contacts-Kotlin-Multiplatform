@@ -19,7 +19,7 @@ expect class ImagePickerFactory(context: PlatformContext) {
 
 expect class ImagePicker {
     @Composable
-    fun registerPicker(onImagePicked: (ByteArray) -> Unit)
+    fun RegisterPicker(onImagePicked: (ByteArray) -> Unit)
 
     fun pickImage()
 }
